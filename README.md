@@ -21,7 +21,7 @@
 ## Staking Warmup:
 0xE319C7e2ae35d6841B39D9D7fee02e5B6193C431
 
-## Olympus DAO:
+## Kandy DAO:
 0x2ad8d37658647b681bB2638910832217993483Ef
 
 ## Bonding Calculator: 
@@ -33,7 +33,7 @@
 ## Distributor:
 0x7Cf4222739f21dA672ec713bBD8783e7CC6C68b4
 
-## OhmCirculatingSUpply:
+## KandyCirculatingSUpply:
 0x50ed924e902AA7411747B69ef06530058b9f9Ad3
 
 ## RedeemHelper: 
