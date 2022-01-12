@@ -36,7 +36,7 @@
 ## Distributor:
 0x7Cf4222739f21dA672ec713bBD8783e7CC6C68b4
 
-## KandyCirculatingSUpply:
+## KandyCirculatingSupply:
 0x50ed924e902AA7411747B69ef06530058b9f9Ad3
 
 ## RedeemHelper: 
