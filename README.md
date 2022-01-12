@@ -27,8 +27,11 @@
 ## Bonding Calculator: 
 0x0C3Efe335251c804D3d900aac5EFfaD84D6f1969
 
-## MIM BondDepositor: 
+## Bond Depo(MiM Principal): 
 0xA4d856CFa8edaCcFB7837c36EF11E0231D05e6e7
+
+## Bond Depo(Kandy-MIM Principal): 
+0x21fBe7e6d6AE4a484C75141D35dBf44aCEB5deA0
 
 ## Distributor:
 0x7Cf4222739f21dA672ec713bBD8783e7CC6C68b4
