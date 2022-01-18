@@ -664,7 +664,7 @@ contract KandyBondDepository is Ownable {
 
     /* ======== STATE VARIABLES ======== */
 
-    address public immutable Time; // token given as payment for bond
+    address public immutable Ohm; // token given as payment for bond
     address public immutable principle; // token used to create bond
     address public immutable treasury; // mints OHM when receives principle
     address public immutable DAO; // receives profit share from bond
@@ -722,14 +722,14 @@ contract KandyBondDepository is Ownable {
     /* ======== INITIALIZATION ======== */
 
     constructor ( 
-        address _Time,
+        address _Ohm,
         address _principle,
         address _treasury, 
         address _DAO, 
         address _bondCalculator
     ) {
-        require( _Time != address(0) );
-        Time = _Time;
+        require( _Ohm != address(0) );
+        Ohm = _Ohm;
         require( _principle != address(0) );
         principle = _principle;
         require( _treasury != address(0) );
@@ -956,13 +956,13 @@ contract KandyBondDepository is Ownable {
      */
     function stakeOrSend( address _recipient, bool _stake, uint _amount ) internal returns ( uint ) {
         if ( !_stake ) { // if user does not want to stake
-            IERC20( Time ).transfer( _recipient, _amount ); // send payout
+            IERC20( Ohm ).transfer( _recipient, _amount ); // send payout
         } else { // if user wants to stake
             if ( useHelper ) { // use if staking warmup is 0
-                IERC20( Time ).approve( stakingHelper, _amount );
+                IERC20( Ohm ).approve( stakingHelper, _amount );
                 IStakingHelper( stakingHelper ).stake( _amount, _recipient );
             } else {
-                IERC20( Time ).approve( staking, _amount );
+                IERC20( Ohm ).approve( staking, _amount );
                 IStaking( staking ).stake( _amount, _recipient );
             }
         }
@@ -1010,7 +1010,7 @@ contract KandyBondDepository is Ownable {
      *  @return uint
      */
     function maxPayout() public view returns ( uint ) {
-        return IERC20( Time ).totalSupply().mul( terms.maxPayout ).div( 100000 );
+        return IERC20( Ohm ).totalSupply().mul( terms.maxPayout ).div( 100000 );
     }
 
     /**
@@ -1065,7 +1065,7 @@ contract KandyBondDepository is Ownable {
      *  @return debtRatio_ uint
      */
     function debtRatio() public view returns ( uint debtRatio_ ) {   
-        uint supply = IERC20( Time ).totalSupply();
+        uint supply = IERC20( Ohm ).totalSupply();
         debtRatio_ = FixedPoint.fraction( 
             currentDebt().mul( 1e9 ), 
             supply
@@ -1148,7 +1148,7 @@ contract KandyBondDepository is Ownable {
      *  @return bool
      */
     function recoverLostToken( address _token ) external returns ( bool ) {
-        require( _token != Time );
+        require( _token != Ohm );
         require( _token != principle );
         IERC20( _token ).safeTransfer( DAO, IERC20( _token ).balanceOf( address(this) ) );
         return true;
