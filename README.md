@@ -33,6 +33,15 @@
 ## Bond Depo(MiM Principal): 
 0x57728a198c08Dcd7D9a7195F3a016e51c5574D0F
 
+## Bond Depo(wAVAX Principal): 
+0x60B5Bc43065922775A350B52F564000D9a4b2988
+
+## Bond Depo(wETH Principal): 
+0x47F9E685D128646453d3B617694cd213a5d03fcC
+
+## Bond Depo(wBTC Principal): 
+0x829c03d7Ddf1a52A611e8f796f3Ef5F97E384efB
+
 ## Bond Depo(Kandy-MIM Principal): 
 0x21fBe7e6d6AE4a484C75141D35dBf44aCEB5deA0
 
